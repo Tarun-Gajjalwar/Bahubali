@@ -1,0 +1,524 @@
+@font-face {
+    font-family: darling;
+    src: url(./MAEL____.TTF);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: darling; */
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+}
+
+/* nav bar */
+#nav{
+    height:100px;
+    width: 100%;
+    color: azure;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* nav heading */
+#nav h3{
+    font-weight: 500px;
+    font-family: darling;
+    letter-spacing: 3px;
+}
+
+
+/* nav nav in center */
+#nav #nav_center{
+    height: 60px;
+    width: 400px;
+    /* background-color: rgb(29, 27, 27); */
+    background: linear-gradient(#694B1A,#6E2F20);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* nav ka a tags */
+#nav_center a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+#nav_center a:hover{
+    text-decoration: underline;
+    color: #fff;
+    
+}
+
+/* nav btn */
+#btn{
+    height: 60px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* nav button */
+#btn button{
+    color: #fff;
+    background-color: #111111;
+    border-radius: 15px;
+    border: 1px solid #694B1A;
+    padding: 10px 25px;
+}
+
+/*  content */
+main #content{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#content img {
+    height: 450px;
+    width: 550px;
+    object-fit: cover;
+    z-index: 5;
+}
+
+/*  */
+
+/* Video Player Container */
+#videoContainer {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    width: 600px;    
+    height: 350px;   
+}
+
+/* Video Element */
+#videoPlayer {
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Overlay */
+#videoOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Play Button */
+#playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.1s ease-out, left 0.1s ease-out,
+                opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Show and scale button on hover */
+#videoContainer:hover #playButton {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Play Icon Container */
+.play-icon-container {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #ffffff;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* SVG Icon */
+.play-icon-svg {
+    width: 1.75rem;
+    height: 1.75rem;
+    color: #6E2F20;
+    margin-left: 0.25rem;
+}
+
+/* "Click to Play" Text */
+.play-button-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-left: 16px;
+    display: block; 
+    font-family: darling;
+    letter-spacing: 3px;
+}
+
+#text {
+    height: 20%;
+    width: 100%;
+    /* background-color: #fff; */
+    padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+
+
+}
+
+#text h1{
+    font-size: 35px;
+    font-family: darling;
+    letter-spacing: 8px;
+
+}
+
+/*  */
+section{
+    height: 1010px;
+    width: 100%;
+    background-color:#111111;
+        /* background: linear-gradient(#694B1A,#6E2F20); */
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: 60px 250px 250px 250px;
+    justify-content: center;
+    grid-gap: 50px;
+    grid-template-areas: "header header header header"
+                         "card1 card2 card3 card4"
+                         "card5 card6 card7 card8"
+                         "card9 card10 card11 card12";
+
+
+
+}
+
+
+.cards{
+    height: 250px;
+    width: 250px;
+    background-color: coral;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.cards img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+
+}
+
+.bottom{
+    height: 30%;
+    width: 100%;
+    background: linear-gradient(transparent,#000 90%);
+    position: absolute;
+    bottom: -40%;
+    transition: all ease 0.5s;
+    color: #fff;
+    font-family: darling;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+.bottom h3 i{
+    /* color: #000; */
+    border-radius: 50%;
+    /* background: #fff; */
+}
+
+
+
+.cards:hover .bottom{
+    bottom: 0;
+}
+
+
+
+header{
+    background: linear-gradient(#694B1A,#6E2F20);
+    grid-area: header;
+    border-radius: 15px;
+    text-align: center;
+    font-family: darling;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+header h2{
+    margin-top: 15px;
+}
+
+#card1{
+    background-color: aqua;
+    grid-area: card1;
+
+}
+
+
+
+#card2{
+    background-color: rgb(0, 255, 157);
+    grid-area: card2;
+}
+#card3{
+    background-color: rgb(255, 183, 0);
+    grid-area: card3;
+}
+#card4{
+    background-color: rgb(255, 0, 251);
+    grid-area: card4;
+}
+#card5{
+    background-color: rgb(111, 0, 255);
+    grid-area: card5;
+}
+#card6{
+    background-color: rgb(147, 225, 140);
+    grid-area: card6;
+}
+
+#card7{
+    background-color: rgb(233, 147, 232);
+    grid-area: card7;
+}
+#card8{
+    background-color: rgb(162, 120, 216);
+    grid-area: card8;
+}
+#card9{
+    background-color: rgb(236, 126, 135);
+    grid-area: card9;
+}
+#card10{
+    background-color: rgb(236, 126, 135);
+    grid-area: card10;
+}
+#card11{
+    background-color: rgb(236, 126, 135);
+    grid-area: card11;
+}
+#card12{
+    background-color: rgb(236, 126, 135);
+    grid-area: card12;
+}
+
+footer{
+    height: 10% ;
+    width: 100%;
+    background-color: #111111;
+    color: #fff;
+    text-align: center;
+
+}
+
+
+/*  */
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+
+/* Tablet screens (up to 1024px) */
+@media (max-width: 1024px) {
+
+    #nav {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 20px;
+        justify-content: space-between;
+    }
+
+    #nav #nav_center {
+        width: 320px;
+        height: 50px;
+        margin-top: 10px;
+    }
+
+    #btn {
+        width: auto;
+        gap: 10px;
+    }
+
+    main #content {
+        flex-direction: column;
+        gap: 30px;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    #content img {
+        height: 350px;
+        width: 80%;
+    }
+
+    #videoContainer {
+        width: 80%;
+        height: auto;
+    }
+
+    #text {
+        padding: 40px 20px;
+    }
+
+    section {
+        grid-template-columns: repeat(3, 250px);
+        grid-template-rows: auto;
+        height: auto;
+        grid-gap: 30px;
+    }
+}
+
+/* Mobile screens (up to 600px) */
+@media (max-width: 600px) {
+
+    #nav {
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        padding: 15px;
+    }
+
+    #nav h3 {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    #nav #nav_center {
+        width: 260px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    #btn {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #btn button {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+    main #content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    #content img {
+        width: 90%;
+        height: 250px;
+    }
+
+    #videoContainer {
+        width: 90%;
+        height: auto;
+    }
+
+    #text {
+        padding: 25px 15px;
+    }
+
+    #text h1 {
+        font-size: 24px;
+        letter-spacing: 5px;
+    }
+
+    #text p {
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    section {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        height: auto;
+        grid-gap: 20px;
+        padding-bottom: 40px;
+    }
+
+    .cards {
+        height: 220px;
+        width: 100%;
+    }
+
+    header h2 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 15px;
+    }
+}
+
+/* Very small screens (up to 400px) */
+@media (max-width: 400px) {
+    #nav_center {
+        width: 220px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    #btn button {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+
+    section {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .cards {
+        height: 200px;
+    }
+}
