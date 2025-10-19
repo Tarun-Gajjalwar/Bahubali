@@ -1,5 +1,5 @@
 ## Bahubali The Epic 
 
-![landing page](bahu1.png)
+![landing page](./readme-image/bahu1.png)
 
-![next page](bahu2.png)
+![next page](./readme-image/bahu2.png)
